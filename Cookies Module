@@ -21,8 +21,7 @@ http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-pat
 # 滴滴出行（as.xiaojukeji.com）
 http-request ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js, timeout=10, tag=DiDi.js
 
-# 微博（m.weibo.cn）
-http-request ^https:\/\/m\.weibo\.cn\/feed\/ script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js, tag=微博通知
+# 微博（api.weibo.cn pay.sc.weibo.com）
 http-request https:\/\/api\.weibo\.cn\/\d\/video\/machine\?gsid script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js, tag=微博
 # 微博钱包
 http-request https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\? script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js, tag=微博钱包
@@ -30,6 +29,9 @@ http-request https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/d
 # 携程旅行（m.ctrip.com）
 http-request https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo script-path=https://raw.githubusercontent.com/iepngs/Script/master/ctrip/index.js, tag=携程旅行
 http-request https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip_cookie.js, tag=携程旅行
+
+# > 微信小程序-同程艺龙 (wx.17u.cn)
+tongc_cookie.js = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/tongc_cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/wx\.17u\.cn\/wcsign\/sign\/GetSignInfo
 
 # 京东宠汪汪（draw.jdfcloud.com）
 http-response ^https:\/\/draw\.jdfcloud\.com\/\/api\/user\/addUser\?code=\w+& script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, timeout=10, tag=宠汪汪助力更新Token
@@ -61,8 +63,8 @@ http-request ^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index script-pat
 # 顺丰速运（mcs-mimp-web.sf-express.com）
 http-request ^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js, tag=顺丰速运
 
-# 10000（wapside.189.cn）
-http-request ^https:\/\/wapside.189.cn:9001\/api\/home\/homeInfo script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js, requires-body=true, tag=中国电信
+# 10000（wapside.189.cn:9001）
+10000.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/wapside.189.cn:9001\/api\/home\/sign
 
 [MITM]
-hostname = %APPEND% m.weibo.cn, api.weibo.cn, pay.sc.weibo.com, weibo.com, api.m.jd.com, draw.jdfcloud.com, wq.jd.com, jdjoy.jd.com, daojia.jd.com, ifac*.iqiyi.com, i.meituan.com, *.video.qq.com, h5.ele.me, h5.ele.me, as.xiaojukeji.com, m.ctrip.com, weather-data.apple.com, api.weather.com, webapi.qmai.cn,gameapi.hellobike.com,activity-1.m.duiba.com.cn, m.gdoil.cn, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, wapside.189.cn, 
+hostname = %APPEND% api.weibo.cn, pay.sc.weibo.com, api.m.jd.com, draw.jdfcloud.com, wq.jd.com, jdjoy.jd.com, daojia.jd.com, ifac*.iqiyi.com, i.meituan.com, *.video.qq.com, h5.ele.me, as.xiaojukeji.com, m.ctrip.com, weather-data.apple.com, api.weather.com, webapi.qmai.cn,gameapi.hellobike.com,activity-1.m.duiba.com.cn, m.gdoil.cn, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, wapside.189.cn:9001, wx.17u.cn, 
