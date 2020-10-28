@@ -42,7 +42,7 @@ http-request https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/tas
 # 京东到家（daojia.jd.com）
 http-request https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js, tag=京东到家
 
-# 彩云天气（weather-data.apple.com）
+# 彩云天气 (weather-data.apple.com, api.weather.com)
 http-request https://weather-data.apple.com script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, tag=彩云天气
 
 # 奈雪的茶（webapi.qmai.cn）
