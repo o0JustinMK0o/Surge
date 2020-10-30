@@ -32,13 +32,6 @@ http-request https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo s
 # > 微信小程序-同程艺龙 (wx.17u.cn)
 tongc_cookie.js = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/tongc_cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/wx\.17u\.cn\/wcsign\/sign\/GetSignInfo
 
-# 京东宠汪汪（draw.jdfcloud.com）
-http-response ^https:\/\/draw\.jdfcloud\.com\/\/api\/user\/addUser\?code=\w+& script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, timeout=10, tag=宠汪汪助力更新Token
-http-request ^https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, timeout=10, tag=宠汪汪助力获取Token
-http-request ^https:\/\/draw\.jdfcloud\.com\/\/pet\/enterRoom\?reqSource=weapp&invitePin=.*+(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?|^https:\/\/draw\.jdfcloud\.com\/\/pet\/helpFriend\?friendPin script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_help.js, timeout=10, tag=宠汪汪强制为别人助力
-http-response ^https:\/\/jdjoy\.jd\.com\/pet\/getPetTreasureBox|^https:\/\/draw\.jdfcloud\.com\/\/pet\/getPetTreasureBox script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_petTreasureBox.js, timeout=10, tag=聚宝盆投狗粮辅助
-http-request https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js, tag=微信小程序 来客有礼
-
 # 京东到家（daojia.jd.com）
 http-request https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js, tag=京东到家
 
@@ -66,4 +59,4 @@ http-request ^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redir
 10000.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/wapside.189.cn:9001\/api\/home\/sign
 
 [MITM]
-hostname = %APPEND% api.weibo.cn, pay.sc.weibo.com, m.weibo.cn, weibo.com, api.m.jd.com, draw.jdfcloud.com, wq.jd.com, jdjoy.jd.com, daojia.jd.com, ifac*.iqiyi.com, i.meituan.com, *.video.qq.com, h5.ele.me, as.xiaojukeji.com, m.ctrip.com, weather-data.apple.com, api.weather.com, webapi.qmai.cn,gameapi.hellobike.com,activity-1.m.duiba.com.cn, m.gdoil.cn, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, wapside.189.cn:9001, wx.17u.cn, 
+hostname = %APPEND% api.weibo.cn, pay.sc.weibo.com, m.weibo.cn, weibo.com, api.m.jd.com, wq.jd.com, jdjoy.jd.com, daojia.jd.com, ifac*.iqiyi.com, i.meituan.com, *.video.qq.com, h5.ele.me, as.xiaojukeji.com, m.ctrip.com, weather-data.apple.com, api.weather.com, webapi.qmai.cn,gameapi.hellobike.com,activity-1.m.duiba.com.cn, m.gdoil.cn, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, wapside.189.cn:9001, wx.17u.cn, 
