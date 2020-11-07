@@ -6,6 +6,10 @@
 # 京东（api.m.jd.com）
 http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=jd
 
+# lxk0301 (draw.jdfcloud.com)
+http-response  ^https:\/\/draw\.jdfcloud\.com\/\/api\/user\/user\/detail\?openId=\w+& script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, requires-body=true, timeout=10, tag=宠汪汪助力更新Token
+http-request ^https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, requires-body=true, timeout=10, tag=宠汪汪助力获取Token
+
 # 爱奇艺（ifac*.iqiyi.com）
 http-request ^https?:\/\/iface(\d)?\.iqiyi\.com\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺
 
@@ -59,4 +63,4 @@ http-request ^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redir
 10000.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/wapside.189.cn:9001\/api\/home\/sign
 
 [MITM]
-hostname = %APPEND% api.weibo.cn, pay.sc.weibo.com, m.weibo.cn, weibo.com, api.m.jd.com, wq.jd.com, jdjoy.jd.com, daojia.jd.com, ifac*.iqiyi.com, i.meituan.com, *.video.qq.com, h5.ele.me, as.xiaojukeji.com, m.ctrip.com, weather-data.apple.com, api.weather.com, webapi.qmai.cn,gameapi.hellobike.com,activity-1.m.duiba.com.cn, m.gdoil.cn, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, wapside.189.cn:9001, wx.17u.cn, 
+hostname = %APPEND% api.weibo.cn, pay.sc.weibo.com, m.weibo.cn, weibo.com, api.m.jd.com, draw.jdfcloud.com, jdjoy.jd.com, daojia.jd.com, ifac*.iqiyi.com, i.meituan.com, *.video.qq.com, h5.ele.me, as.xiaojukeji.com, m.ctrip.com, weather-data.apple.com, api.weather.com, webapi.qmai.cn,gameapi.hellobike.com,activity-1.m.duiba.com.cn, m.gdoil.cn, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, wapside.189.cn:9001, wx.17u.cn, 
